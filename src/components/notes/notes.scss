@@ -1,0 +1,138 @@
+.notes {
+  margin-top: 30px;
+}
+
+.notes__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes__title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #323232;
+}
+
+.notes__btn {
+  font-family: 'Roboto';
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)), #FFFBFE;
+  box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  cursor: pointer;
+  width: 120px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.notes__btn span {
+  color: #6750A4;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.card {
+  background: linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)), #FFFBFE;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 16px 16px 28px 16px;
+}
+
+.active .card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.active .card__img { 
+  max-width: 200px;
+}
+
+.card__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1C1B1F;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.card__date {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #CAC4D0;
+}
+
+.card__desc {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.card__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: transparent;
+  color: #6750A4;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.card__btn_red {
+  color: #CF1B1B;
+}
+
+.card__btn:hover {
+  background: #E6DDFF;
+}
+
+.card__btn_red:hover {
+  background: #FFE1E1;
+}
+
+.notes__list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.notes__list.active {
+  grid-template-columns: 1fr;
+}
+
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

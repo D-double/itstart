@@ -1,0 +1,61 @@
+.header {
+  background: #F3EDF7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 70px;
+}
+
+.header__content, .header__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 20px;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.header__content_hide {
+  position: absolute;
+  transform: translateY(100%);
+}
+
+.header__form_hide {
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.header__lang {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+button {
+  border: none;
+  color: inherit;
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  color: #1C1B1F;
+}
+
+.header__input {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  outline: none;
+  color: inherit;
+}
+
+.header__input::placeholder {
+  color: #9D9D9D;
+}
