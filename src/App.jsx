@@ -5,6 +5,7 @@ import AddBtn from "./components/add-btn";
 import { useEffect } from "react";
 import { getSeminars } from "./store/features/seminars";
 import { useDispatch } from "react-redux";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const dispatch = useDispatch()
@@ -18,6 +19,7 @@ function App() {
       <Notes></Notes> {/* список карточек семинаров */}
       <Modal></Modal> {/* модальное окно для изменения, удаления и добавления семинаров */}
       <AddBtn></AddBtn> {/* кнопка добавления семинара */}
+      <ToastContainer />
     </>
   );
 }

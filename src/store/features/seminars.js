@@ -3,7 +3,20 @@ import {
   createSlice
 } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
+const serverNotFound = () =>{
+  toast.error('Сервер не найден!', {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+}
 // асинхронный метод для получения всех семинаров
 export const getSeminars = createAsyncThunk('seminars/getSeminars', async () => {
   try {
@@ -11,6 +24,7 @@ export const getSeminars = createAsyncThunk('seminars/getSeminars', async () => 
     return result.data;
   } catch (error) {
     console.log(error);
+    serverNotFound()
   }
 })
 
@@ -23,6 +37,8 @@ export const delSeminar = createAsyncThunk('seminars/delSeminar', async (_, {dis
     dispatch(closeModal())
   } catch (error) {
     console.log(error);
+    serverNotFound()
+    dispatch(closeModal())
   }
 })
 
@@ -34,6 +50,8 @@ export const changeSeminar = createAsyncThunk('seminars/editSeminar', async (ele
     dispatch(closeModal())
   } catch (error) {
     console.log(error);
+    serverNotFound()
+    dispatch(closeModal())
   }
 })
 
@@ -46,6 +64,8 @@ export const addSeminar = createAsyncThunk('seminars/addSeminar', async (elem, {
     dispatch(closeModal())
   } catch (error) {
     console.log(error);
+    serverNotFound()
+    dispatch(closeModal())
   }
 })
 
